@@ -19,6 +19,6 @@ export default class extends Controller {
   }
 
   redirectTo() {
-    window.location.href ="/";
+    window.location.href = "/";
   }
 }
