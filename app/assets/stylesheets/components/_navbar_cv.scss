@@ -1,0 +1,128 @@
+/* Styles de base */
+
+.nav-sidebar {
+  background-color: $lin;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  height: 100vh;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.logo {
+  display: block;
+  padding-top: 5rem;
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  padding-top: 14rem;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+.navbar li {
+  font-weight: 800;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.navbar a {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: 1.5rem;
+  display: block;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler:hover {
+  color: white;
+}
+
+.name {
+  display: none;
+}
+
+/* Styles pour le responsive */
+@media (max-width: 768px) {
+  .nav-sidebar {
+    width: 100%;
+    height: 72px;
+    padding-left: 0;
+    padding-right: 0;
+
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+  }
+
+  .navbar-toggler:hover {
+    color: white;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar-toggler.active + #navbarContent {
+    display: block;
+  }
+
+  .name {
+    display: block;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: left;
+    padding-left: 1rem;
+    padding-top: 22px;
+  }
+
+
+}

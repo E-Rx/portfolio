@@ -1,0 +1,102 @@
+.container-nav {
+  top: 0;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container-links {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container-links a {
+  color: $grey;
+  text-decoration: none;
+  font-size: 32px;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.nav-name {
+  color: $grey;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 32px;
+  display: flex;
+  align-items:center;
+  margin-left: 10px;
+}
+
+/* espace entre prénom et nom  */
+.nav-name span {
+  margin-right: 5px;
+}
+
+/*hover*/
+.container-links a:hover {
+  color: $dark;
+ }
+
+/* Brackets go out */
+.brackets a:before, .brackets a:after
+{
+    position: absolute;
+    opacity: 0;
+    font-size: 40px;
+    top: 0px;
+    transition: all 0.3s;
+}
+
+.brackets a:before
+{
+    content: '(';
+    color: $lin;
+    left: 0px;
+    transform: translateX(10px);
+}
+
+.brackets a:after
+{
+    content: ')';
+    color: $lin;
+    right: 0px;
+    transform: translateX(-10px);
+}
+
+.brackets a:hover:before, .brackets a:hover:after
+{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+
+@media (max-width: 768px) {
+  .container-nav {
+    flex-direction: column;
+  }
+
+  .container-links {
+    display: none;
+  }
+
+  // .dropdown-menu {
+  //   display: block;
+  // }
+}
+
+// .dropdown-menu {
+//   display: none;
+// }
