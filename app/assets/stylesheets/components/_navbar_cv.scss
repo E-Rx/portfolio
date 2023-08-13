@@ -13,8 +13,13 @@
 }
 
 .logo {
-  display: block;
-  padding-top: 5rem;
+  width: 88px;
+  height: 88px;
+  justify-content: center;
+  border-radius: 50%;
+  border: 5px solid $brown;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 .navbar {
@@ -67,6 +72,10 @@
   display: none;
 }
 
+.fa-solid fa-bars {
+  display: none;
+}
+
 /* Styles pour le responsive */
 @media (max-width: 768px) {
   .nav-sidebar {
@@ -114,6 +123,13 @@
     display: block;
   }
 
+  .nav-resp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .name {
     display: block;
     font-family: "Mulish", sans-serif;
@@ -124,5 +140,13 @@
     padding-top: 22px;
   }
 
+  .fa-solid fa-bars {
+    display: block;
+    color: white;
+    font-size: 2rem;
+    text-align: right;
+    padding-right: 1rem;
+    padding-top: 22px;
+  }
 
 }
